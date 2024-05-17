@@ -1,0 +1,15 @@
+[package]
+name = "yt-drag-and-drop-levels"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = "0.13.2"
+# Use unstable version for Bevy 0.13 support
+bevy_ecs_ldtk = { git = "https://github.com/Trouv/bevy_ecs_ldtk.git" }
+
+[patch.crates-io]
+# Patch unstable version to resolve conflicting dependencies from bevy_ecs_ldtk
+bevy_ecs_tilemap = { git = "https://github.com/StarArawn/bevy_ecs_tilemap" }
